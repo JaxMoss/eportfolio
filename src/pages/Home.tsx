@@ -6,7 +6,6 @@ export default function Home() {
   return (
     <section className="relative min-h-[calc(100vh-5rem)] flex items-center overflow-hidden">
       {/* background effects */}
-      <div className="bg-grid" />
       <div className="glow glow-blue left-1/2 -translate-x-1/2 -top-32" />
       <div className="glow glow-green -left-40 top-40" />
       <div className="glow glow-amber -right-40 -bottom-40" />
@@ -28,9 +27,9 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="mt-4 text-[var(--muted)] text-lg"
+            className="mt-4 text-[var(--muted)] text-lg max-w-2xl mx-auto"
           >
-            Mechanical Engineering • Texas A&M University • National Merit Finalist
+            I’m Jackson — CEO & founder of Uru Intelligence. I’m launching an AI work productivity platform. I also study Mechanical Engineering at Texas A&M and I’m a National Merit Finalist.
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
@@ -47,45 +46,40 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Quick Info Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
-          {[
-            { k: 'Major', v: 'Mechanical Engineering' },
-            { k: 'School', v: 'Texas A&M University' },
-            { k: 'Year', v: 'Sophomore' },
-            { k: 'Status', v: 'National Merit Finalist' },
-            { k: 'Residence', v: 'Appelt Hall, College Station, TX' },
-            { k: 'Focus', v: 'Technical Communication & Innovation' },
-          ].map(({ k, v }) => (
-            <motion.div
-              key={k}
-              initial={{ opacity: 0, y: 8 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.35 }}
-              className="card-surface p-5"
+        {/* Featured: Uru Intelligence */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.35, delay: 0.1 }}
+          className="card-surface p-6 md:p-8 mt-6"
+        >
+          <h2 className="text-2xl md:text-3xl font-semibold">Uru Intelligence</h2>
+          <p className="text-[var(--muted)] mt-3 max-w-3xl">
+            I’m building Uru Intelligence — an AI work productivity platform designed to make teams faster, clearer,
+            and more effective. It blends smart automation with clean communication so your work moves forward without friction.
+          </p>
+          <div className="mt-4">
+            <Link
+              to="/projects"
+              className="inline-flex items-center gap-2 rounded-lg px-5 py-3 bg-[var(--blue)] text-white hover:shadow-lg hover:shadow-[rgba(59,130,246,0.35)] transition-transform hover:-translate-y-0.5"
             >
-              <div className="text-sm text-[var(--muted)]">{k}</div>
-              <div className="text-lg md:text-xl font-semibold mt-1">{v}</div>
-            </motion.div>
-          ))}
-        </div>
+              Learn more
+            </Link>
+          </div>
+        </motion.div>
 
         {/* Intro */}
         <div className="card-surface p-6 md:p-8 mt-8">
-          <h2 className="text-2xl font-semibold">Welcome to My Portfolio</h2>
+          <h2 className="text-2xl font-semibold">Welcome</h2>
           <p className="text-[var(--muted)] mt-3">
-            This website showcases my journey as a Mechanical Engineering student at Texas A&M University and my
-            development as a technical communicator. As a National Merit Finalist, I entered directly into the Mechanical
-            Engineering program, bypassing the traditional ETAM process.
+            I like building useful things with a clear purpose. Uru Intelligence is the best example of that — a tool that
+            helps people work smarter, communicate better, and get results faster. Along the way, I’m studying Mechanical
+            Engineering at Texas A&M and staying hands-on with design, systems, and communication.
           </p>
           <p className="text-[var(--muted)] mt-3">
-            I combine rigorous engineering principles with effective communication, preparing for a future where I can
-            lead complex engineering projects while clearly articulating solutions to diverse stakeholders.
-          </p>
-          <p className="text-[var(--muted)] mt-3">
-            Experience spans SOLIDWORKS design, BlueStamp Engineering, NASA Space Camp Advanced Training, Aggies Invent,
-            and work on the Uru AI platform.
+            My background includes SOLIDWORKS design, BlueStamp Engineering, NASA Space Camp Advanced Training, Aggies Invent,
+            and a lot of writing that turns complex ideas into something people can actually use.
           </p>
         </div>
       </div>

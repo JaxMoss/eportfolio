@@ -12,20 +12,18 @@ export default function About() {
           </div>
         </div>
         <div className="max-w-3xl mx-auto text-left">
-          <h2 className="text-2xl font-semibold mt-8">Personal Portfolio Website</h2>
+          <h2 className="text-2xl font-semibold mt-8">Personal Portfolio</h2>
           <p className="text-[var(--muted)] mt-3">
-            Welcome to my personal portfolio website! This site features my works as a technical communicator and
-            showcases my academic journey as a sophomore Mechanical Engineering student at Texas A&M University.
-          </p>
-          <p className="text-[var(--muted)] mt-3">
-            As a National Merit Finalist, I entered directly into the Mechanical Engineering program, bypassing the
-            ETAM process. This reflects my strong academic foundation and commitment to engineering excellence.
+            Hi, I’m Jackson. I’m the CEO & founder of <strong>Uru Intelligence</strong>, an AI work productivity platform I’m
+            launching. I also study Mechanical Engineering at Texas A&M. As a National Merit Finalist, I entered straight
+            into the program through ETAM bypass. This site shares what I’m building and how I think about engineering,
+            product, and clear communication.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8">About Me</h2>
           <p className="text-[var(--muted)] mt-3">
-            I combine technical expertise with effective communication, aiming to lead complex engineering projects
-            while clearly articulating solutions to diverse stakeholders.
+            I like building useful, well-explained products. My focus is pairing solid engineering with writing and
+            design so ideas make sense to the people who need them.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8">My Diverse Interests and Experiences</h2>
@@ -57,7 +55,7 @@ export default function About() {
             <div className="card-surface p-5">
               <h3 className="text-xl font-semibold">Leadership & Innovation</h3>
               <ul className="list-disc pl-5 mt-3 space-y-2 text-[var(--muted)]">
-                <li>Uru platform AI development</li>
+                <li>Uru Intelligence (CEO & Founder)</li>
                 <li>Financial dashboards and documentation</li>
                 <li>Collaborative university projects and competitions</li>
               </ul>

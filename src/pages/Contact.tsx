@@ -27,15 +27,14 @@ export default function Contact() {
       <div className="text-center">
         <h1 className="text-3xl md:text-4xl font-bold">Contact Me</h1>
         <p className="text-[var(--muted)] mt-3 max-w-2xl mx-auto">
-          I'd love to hear from you! Whether you have questions about my engineering projects, want to discuss
-          technical communication opportunities, or explore collaborations, feel free to reach out.
+          The easiest way to reach me is email. Tell me a bit about what you're working on — I'm happy to chat about Uru Intelligence, engineering, or collaboration.
         </p>
       </div>
 
       <div className="card-surface p-6 md:p-8">
         <div className="text-center">
           <h2 className="text-xl font-semibold">Get In Touch</h2>
-          <p className="mt-2 font-medium text-[var(--maroon)]">4e7 mossjackson@tamu.edu</p>
+          <p className="mt-2 font-medium text-[var(--maroon)]">mossjackson@tamu.edu</p>
           <p className="text-[var(--muted)] text-sm mt-2">
             Please use the form below to send me a message, or email me directly at the address above.
           </p>
@@ -65,11 +64,7 @@ export default function Contact() {
           </div>
         </form>
 
-        <div className="mt-6 rounded-md border border-amber-400/30 bg-amber-400/10 p-4">
-          <p className="m-0 text-amber-200 text-sm">
-            <strong>Note:</strong> For privacy and security reasons, I do not share my personal phone number. Please use email for all communications.
-          </p>
-        </div>
+
       </div>
     </section>
   )

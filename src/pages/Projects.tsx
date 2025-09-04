@@ -5,8 +5,7 @@ import { FolderKanban } from 'lucide-react'
 export default function Projects() {
   return (
     <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-      {/* Subtle background */}
-      <div className="bg-grid" />
+      {/* Subtle background handled globally */}
       <div className="glow glow-blue left-1/2 -translate-x-1/2 -top-40" />
       <div className="glow glow-green -left-40 top-40" />
 
@@ -25,9 +24,8 @@ export default function Projects() {
           </span>
         </h1>
         <p className="text-[var(--muted)] mt-4 max-w-2xl mx-auto">
-          I’m currently preparing a polished showcase of engineering designs, technical documentation,
-          and innovation challenge submissions. This section will launch with detailed write-ups,
-          visuals, and interactive previews.
+          My flagship project is <strong>Uru Intelligence</strong> — an AI work productivity platform I’m launching as
+          CEO & founder. I’ll be sharing product details, demos, and the story behind the build here soon.
         </p>
         <div className="mt-6 inline-flex items-center gap-2 text-sm text-[var(--muted)]">
           <span>ETA:</span>

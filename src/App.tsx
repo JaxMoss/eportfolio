@@ -33,9 +33,11 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router basename="/eportfolio">
-      <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
+      <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] relative">
+        {/* Site-wide subtle grid background */}
+        <div className="bg-grid fixed inset-0 z-0" />
         <Navbar />
-        <main className="pt-20 pb-12">
+        <main className="relative z-10 pt-20 pb-12">
           <AnimatedRoutes />
         </main>
       </div>
