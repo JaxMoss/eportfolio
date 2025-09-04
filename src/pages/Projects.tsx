@@ -6,8 +6,7 @@ export default function Projects() {
   return (
     <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
       {/* Subtle background handled globally */}
-      <div className="glow glow-blue left-1/2 -translate-x-1/2 -top-40" />
-      <div className="glow glow-green -left-40 top-40" />
+      {/* color glows handled globally in App */}
 
       <motion.div
         initial={{ opacity: 0, y: 12 }}

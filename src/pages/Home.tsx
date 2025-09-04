@@ -5,11 +5,7 @@ import { Link } from 'react-router-dom'
 export default function Home() {
   return (
     <section className="relative min-h-[calc(100vh-5rem)] flex items-center overflow-hidden">
-      {/* background effects */}
-      <div className="glow glow-blue left-1/2 -translate-x-1/2 -top-32" />
-      <div className="glow glow-green -left-40 top-40" />
-      <div className="glow glow-amber -right-40 -bottom-40" />
-
+      {/* background effects handled globally in App */}
       <div className="relative w-full">
         {/* Hero */}
         <div className="text-center py-10">
