@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <script>
+      // SPA redirect for GitHub Pages (supports nested routes with base path /eportfolio/)
+      (function() {
+        var l = window.location;
+        var repoBase = '/eportfolio';
+        if (!l.pathname.startsWith(repoBase)) repoBase = '';
+        var target = repoBase + '/index.html';
+        l.replace(target + '?' + 'p=' + encodeURIComponent(l.pathname + l.search + l.hash));
+      })();
+    </script>
+  </body>
+</html>
+
