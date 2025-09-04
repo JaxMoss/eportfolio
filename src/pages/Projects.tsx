@@ -1,49 +1,39 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { FolderKanban } from 'lucide-react'
 
 export default function Projects() {
-  const cards = [
-    { t: 'Engineering Documentation', d: 'Technical reports, design documentation, and SOLIDWORKS presentations' },
-    { t: 'Innovation Projects', d: 'Aggies Invent challenges and engineering design solutions' },
-    { t: 'Platform Development', d: 'Uru platform contributions and dashboards' },
-    { t: 'Academic Projects', d: 'Course assignments and research presentations' },
-    { t: 'Visual Communication', d: 'Engineering diagrams and technical infographics' },
-    { t: 'Professional Development', d: 'BlueStamp, NASA Space Camp, and more' },
-  ]
-
   return (
-    <section className="space-y-6">
-      <div className="text-center">
-        <h1 className="text-3xl md:text-4xl font-bold">My Projects</h1>
-        <p className="text-[var(--muted)] mt-3 max-w-2xl mx-auto">
-          This section showcases technical communication and engineering design work demonstrating the intersection of
-          technical expertise and effective communication.
-        </p>
-      </div>
+    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      {/* Subtle background */}
+      <div className="bg-grid" />
+      <div className="glow glow-blue left-1/2 -translate-x-1/2 -top-40" />
+      <div className="glow glow-green -left-40 top-40" />
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {cards.map((c, i) => (
-          <motion.div
-            key={c.t}
-            initial={{ opacity: 0, y: 8 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.35, delay: i * 0.03 }}
-            className="card-surface p-5 hover:-translate-y-1 hover:shadow-xl transition transform"
-          >
-            <h3 className="text-xl font-semibold">{c.t}</h3>
-            <p className="text-[var(--muted)] mt-2">{c.d}</p>
-            <div className="mt-4 text-sm text-[var(--muted)]">Preview coming soon</div>
-          </motion.div>
-        ))}
-      </div>
-
-      <div className="card-surface p-5 border border-dashed border-muted">
-        <p className="text-[var(--muted)] text-center">
-          <strong>Portfolio Update:</strong> This projects section will be completed and populated with detailed
-          descriptions, process documentation, and reflections at the end of the semester.
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        className="relative card-surface px-8 py-12 text-center max-w-3xl mx-auto"
+      >
+        <div className="mx-auto w-20 h-20 rounded-2xl flex items-center justify-center bg-white/5 border border-white/10 mb-6">
+          <FolderKanban className="text-[var(--blue)]" size={40} />
+        </div>
+        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">
+          <span className="bg-gradient-to-r from-[var(--blue)] via-[var(--amber)] to-[var(--green)] bg-clip-text text-transparent">
+            Projects Coming Soon
+          </span>
+        </h1>
+        <p className="text-[var(--muted)] mt-4 max-w-2xl mx-auto">
+          I’m currently preparing a polished showcase of engineering designs, technical documentation,
+          and innovation challenge submissions. This section will launch with detailed write-ups,
+          visuals, and interactive previews.
         </p>
-      </div>
+        <div className="mt-6 inline-flex items-center gap-2 text-sm text-[var(--muted)]">
+          <span>ETA:</span>
+          <span className="px-2 py-1 rounded bg-white/5 border border-white/10">End of Semester</span>
+        </div>
+      </motion.div>
     </section>
   )
 }

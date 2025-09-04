@@ -42,11 +42,16 @@ body {
 .text-muted { color: var(--muted); }
 .border-muted { border-color: rgba(148, 163, 184, 0.2); }
 
-/***** Typewriter caret (used by hero) *****/
-.type-caret::after {
-  content: "|";
-  margin-left: 6px;
-  color: var(--blue);
-  animation: blink 1s steps(2, start) infinite;
+/* Subtle animated grid background */
+.bg-grid {
+  position: absolute; inset: 0; pointer-events: none; opacity: .35;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
-@keyframes blink { to { visibility: hidden; } }
+/* Soft radial glow accent */
+.glow { position: absolute; width: 720px; height: 720px; filter: blur(90px); pointer-events:none; }
+.glow-blue { background: radial-gradient(circle at center, rgba(59,130,246,.20), transparent 60%); }
+.glow-green { background: radial-gradient(circle at center, rgba(16,185,129,.12), transparent 60%); }
+.glow-amber { background: radial-gradient(circle at center, rgba(245,158,11,.10), transparent 60%); }

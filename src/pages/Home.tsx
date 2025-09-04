@@ -4,8 +4,14 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <section className="min-h-[calc(100vh-5rem)] flex items-center">
-      <div className="w-full">
+    <section className="relative min-h-[calc(100vh-5rem)] flex items-center overflow-hidden">
+      {/* background effects */}
+      <div className="bg-grid" />
+      <div className="glow glow-blue left-1/2 -translate-x-1/2 -top-32" />
+      <div className="glow glow-green -left-40 top-40" />
+      <div className="glow glow-amber -right-40 -bottom-40" />
+
+      <div className="relative w-full">
         {/* Hero */}
         <div className="text-center py-10">
           <motion.h1
@@ -17,7 +23,6 @@ export default function Home() {
             <span className="bg-gradient-to-r from-[var(--blue)] via-[var(--amber)] to-[var(--green)] bg-clip-text text-transparent">
               Jackson Moss
             </span>
-            <span className="type-caret" />
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
