@@ -34,8 +34,9 @@ function Contact() {
       
       <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
         <p>
-          I'd love to hear from you! Whether you have questions about my work, 
-          want to discuss potential collaborations, or just want to connect, 
+          I'd love to hear from you! Whether you have questions about my engineering projects,
+          want to discuss technical communication opportunities, potential collaborations,
+          or just want to connect about shared interests in engineering and innovation,
           please don't hesitate to reach out.
         </p>
       </div>
@@ -49,8 +50,8 @@ function Contact() {
           textAlign: 'center'
         }}>
           <h2>Get In Touch</h2>
-          <p style={{ fontSize: '1.1rem', color: '#667eea', fontWeight: '500' }}>
-            📧 your.email@example.com
+          <p style={{ fontSize: '1.1rem', color: '#500000', fontWeight: '500' }}>
+            📧 mossjackson@tamu.edu
           </p>
           <p style={{ color: '#666', fontSize: '0.9rem', marginTop: '1rem' }}>
             Please use the form below to send me a message, or email me directly at the address above.

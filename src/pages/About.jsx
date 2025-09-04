@@ -10,68 +10,88 @@ function About() {
         width: '200px',
         height: '200px',
         borderRadius: '50%',
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        background: 'linear-gradient(135deg, #500000 0%, #800000 100%)', // Texas A&M maroon colors
         margin: '2rem auto',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         color: 'white',
         fontSize: '3rem',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        border: '4px solid #500000'
       }}>
         JM
       </div>
       
-      <div style={{ textAlign: 'left', maxWidth: '800px', margin: '0 auto' }}>
+      <div style={{ textAlign: 'left', maxWidth: '900px', margin: '0 auto' }}>
         <h2>Personal Portfolio Website</h2>
         <p>
-          Welcome to my personal portfolio website! This site serves as a comprehensive 
-          showcase of my work and development as a technical communicator. Here, you'll 
-          find a curated collection of my projects, writing samples, and professional 
-          accomplishments that demonstrate my skills in making complex technical 
-          information accessible and engaging.
+          Welcome to my personal portfolio website! This site features my works as a technical communicator
+          and showcases my academic journey as a sophomore Mechanical Engineering student at Texas A&M University.
         </p>
-        
+
         <p>
-          This portfolio will feature my works as a technical communicator, including 
-          documentation projects, user guides, instructional materials, and other 
-          communication artifacts that highlight my ability to bridge the gap between 
-          technical complexity and user understanding.
+          As a National Merit Finalist, I was able to enter directly into the Mechanical Engineering program,
+          bypassing the traditional ETAM (Entry to a Major) process. This early admission reflects my strong
+          academic foundation and commitment to engineering excellence.
         </p>
-        
+
         <h2>About Me</h2>
         <p>
-          I am a dedicated technical communication student with a passion for clear, 
-          effective communication. My interests span across various areas of technical 
-          writing, user experience design, and information architecture. I believe that 
-          good technical communication is not just about conveying information—it's 
-          about creating meaningful connections between technology and the people who use it.
+          I am passionate about combining technical expertise with effective communication skills, preparing
+          for a future where I can lead complex engineering projects while clearly articulating solutions to
+          diverse stakeholders. This portfolio demonstrates my evolution as both an engineer and technical communicator.
         </p>
         
-        <h2>My Interests</h2>
-        <div className="info-grid" style={{ marginTop: '2rem' }}>
+        <h2>My Diverse Interests and Experiences</h2>
+
+        <h3>Engineering and Technical Innovation</h3>
+        <ul style={{ marginBottom: '2rem', lineHeight: '1.8' }}>
+          <li>Advanced engineering design using professional software like SOLIDWORKS</li>
+          <li>Participation in prestigious engineering programs including BlueStamp Engineering and NASA Space Camp Advanced Training</li>
+          <li>Active involvement in innovation challenges such as Aggies Invent, focusing on next-generation secure production technologies</li>
+          <li>Interest in robotics, manufacturing, and technical problem-solving</li>
+        </ul>
+
+        <h3>Technical Communication Excellence</h3>
+        <ul style={{ marginBottom: '2rem', lineHeight: '1.8' }}>
+          <li>Developing expertise in translating complex engineering concepts into clear, accessible communication</li>
+          <li>Building skills to bridge technical and non-technical audiences through effective documentation and presentation</li>
+        </ul>
+
+        <h3>Academic Achievement</h3>
+        <ul style={{ marginBottom: '2rem', lineHeight: '1.8' }}>
+          <li>National Merit Finalist recognition for academic excellence</li>
+          <li>Successfully managing rigorous coursework including advanced engineering mathematics, design principles, and technical writing</li>
+        </ul>
+
+        <h3>Leadership and Innovation</h3>
+        <ul style={{ marginBottom: '2rem', lineHeight: '1.8' }}>
+          <li>Contributing to cutting-edge AI platform development through work with the Uru platform</li>
+          <li>Creating financial dashboards and technical documentation</li>
+          <li>Participating in university innovation competitions and collaborative engineering projects</li>
+        </ul>
+
+        <div className="info-grid" style={{ marginTop: '3rem' }}>
           <div className="info-card">
-            <h3>Technical Writing</h3>
-            <p>Creating clear, concise documentation that helps users accomplish their goals</p>
+            <h3>Current Technical Competencies</h3>
+            <p><strong>CAD/Design:</strong> SOLIDWORKS<br/>
+            <strong>Programming:</strong> AI platform development, financial modeling<br/>
+            <strong>Coursework:</strong> Mechanical Engineering fundamentals, technical writing</p>
           </div>
           <div className="info-card">
-            <h3>User Experience</h3>
-            <p>Designing information experiences that are intuitive and user-centered</p>
-          </div>
-          <div className="info-card">
-            <h3>Digital Communication</h3>
-            <p>Leveraging digital tools and platforms to enhance communication effectiveness</p>
-          </div>
-          <div className="info-card">
-            <h3>Information Design</h3>
-            <p>Organizing and presenting complex information in visually appealing ways</p>
+            <h3>Key Experiences</h3>
+            <p><strong>BlueStamp Engineering</strong> - Multi-week intensive program<br/>
+            <strong>NASA Space Camp</strong> - Advanced aerospace training<br/>
+            <strong>Aggies Invent</strong> - University innovation competition</p>
           </div>
         </div>
         
         <p style={{ marginTop: '2rem' }}>
-          Through this portfolio, you'll get to know me not just as a technical communicator, 
-          but as someone who is genuinely excited about the power of effective communication 
-          to make technology more accessible and useful for everyone.
+          Through this portfolio, you'll get to know me as an engineering student who values both
+          technical precision and clear communication. I believe that the most impactful engineers
+          are those who can not only solve complex problems but also effectively communicate their
+          solutions to make technology more accessible and useful for everyone.
         </p>
       </div>
     </div>

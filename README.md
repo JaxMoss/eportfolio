@@ -1,15 +1,15 @@
-# COMM 205 Technical Communication Portfolio
+# Jackson Moss - COMM 205 Technical Communication Portfolio
 
-A professional eportfolio showcasing technical communication projects and skills, built with React and deployed on GitHub Pages.
+A professional eportfolio showcasing technical communication projects and mechanical engineering skills, built with React and deployed on GitHub Pages.
 
 ## 🎯 Project Overview
 
-This portfolio website was created for COMM 205 and serves as a comprehensive showcase of technical communication work. It features:
+This portfolio website was created for COMM 205 by Jackson Moss, a sophomore Mechanical Engineering student at Texas A&M University and National Merit Finalist. It serves as a comprehensive showcase of technical communication work within an engineering context. It features:
 
-- **Home Page**: Introduction with name, major, school, and professional images
-- **About Page**: Personal portfolio description and background information
-- **Contact Page**: Professional contact form (email only for privacy)
-- **Projects Page**: Showcase of technical communication projects (to be populated throughout the semester)
+- **Home Page**: Introduction with Jackson's name, Mechanical Engineering major, Texas A&M University, and National Merit Finalist status
+- **About Page**: Comprehensive background including engineering experiences, technical competencies, and academic achievements
+- **Contact Page**: Professional contact form with Texas A&M email (mossjackson@tamu.edu)
+- **Projects Page**: Showcase of technical communication and engineering projects (to be populated throughout the semester)
 
 ## 🚀 Features
 

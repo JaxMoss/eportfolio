@@ -8,7 +8,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          JaxMoss
+          Jackson Moss
         </Link>
         <ul className="nav-menu">
           <li>
