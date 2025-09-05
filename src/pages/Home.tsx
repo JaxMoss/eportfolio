@@ -26,7 +26,7 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-[var(--muted)] text-lg max-w-2xl mx-auto"
           >
-            I’m Jackson — CEO & founder of Uru Intelligence. I’m launching an AI work productivity platform. I also study Mechanical Engineering at Texas A&M.
+            I’m Jax — CEO & founder of Uru Intelligence. I’m launching an AI work productivity platform. I also study Mechanical Engineering at Texas A&M.
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}

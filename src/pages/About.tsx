@@ -13,10 +13,37 @@ export default function About() {
             className="size-28 md:size-36 rounded-full object-cover border-2 border-[var(--maroon)] shadow-lg"
           />
         </div>
+        {/* Photo Collage */}
+        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { src: 'about-1.jpg', alt: 'Jax working on hardware', h: 'h-56 md:h-64' },
+            { src: 'about-2.jpg', alt: 'Team / event moment', h: 'h-72 md:h-80 lg:row-span-2' },
+            { src: 'about-3.jpg', alt: 'Robotics / lab scene', h: 'h-56 md:h-64' },
+            { src: 'about-4.png', alt: 'Uru Intelligence UI concept', h: 'h-56 md:h-64' },
+          ].map((it, i) => (
+            <motion.div
+              key={it.src}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.35, delay: i * 0.05 }}
+              className={`relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 ${it.h}`}
+            >
+              <img
+                src={`${import.meta.env.BASE_URL}images/${it.src}`}
+                alt={it.alt}
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.04]"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+            </motion.div>
+          ))}
+        </div>
+
         <div className="max-w-3xl mx-auto text-left">
           <h2 className="text-2xl font-semibold mt-8">Personal Portfolio</h2>
           <p className="text-[var(--muted)] mt-3">
-            Hi, I’m Jackson. I’m the CEO & founder of <strong>Uru Intelligence</strong>, an AI work productivity platform I’m
+            Hi, I’m Jax. I’m the CEO & founder of <strong>Uru Intelligence</strong>, an AI work productivity platform I’m
             launching. I also study Mechanical Engineering at Texas A&M. This site shares what I’m building and how I think
             about engineering, product, and clear communication.
           </p>
