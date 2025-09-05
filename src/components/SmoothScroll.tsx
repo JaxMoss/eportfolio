@@ -11,7 +11,7 @@ export default function SmoothScroll() {
     const lenis = new Lenis({
       smoothWheel: true,
       smoothTouch: false,
-      duration: 1.0,
+      duration: 0.7, // slightly snappier to reduce perceived "glitch"
       easing: (t: number) => 1 - Math.pow(1 - t, 3),
     })
 

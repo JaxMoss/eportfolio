@@ -35,10 +35,11 @@ export default function About() {
           {photos.map((p, i) => (
             <motion.figure
               key={p.src}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.35, delay: i * 0.05 }}
+              style={{ contain: 'content' }}
               className="relative mb-4 break-inside-avoid overflow-hidden rounded-2xl border border-white/10 bg-white/5"
             >
               <img
@@ -46,6 +47,7 @@ export default function About() {
                 alt={p.alt}
                 className="w-full h-auto block"
                 loading="lazy"
+                decoding="async"
               />
               <button
                 type="button"
@@ -60,6 +62,7 @@ export default function About() {
         {openIndex !== null && (
           <div
             className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-8"
+            data-lenis-prevent
             onClick={() => setOpenIndex(null)}
           >
             <img
