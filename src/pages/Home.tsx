@@ -2,10 +2,12 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import MagneticButton from '../components/MagneticButton'
+import TiltCard from '../components/TiltCard'
+import TypewriterText from '../components/TypewriterText'
 
 export default function Home() {
   return (
-    <section className="relative min-h-[calc(100vh-5rem)] flex items-center overflow-hidden">
+    <section className="relative min-h-[calc(100vh-5rem)] flex items-center overflow-visible">
       {/* background effects handled globally in App */}
       <div className="relative w-full">
         {/* Hero */}
@@ -16,9 +18,10 @@ export default function Home() {
             transition={{ duration: 0.4 }}
             className="text-4xl md:text-6xl font-bold tracking-tight"
           >
-            <span className="bg-gradient-to-r from-[var(--blue)] via-[var(--amber)] to-[var(--green)] bg-clip-text text-transparent">
-              Jax Moss
-            </span>
+            <TypewriterText
+              text="Jax Moss"
+              className="bg-gradient-to-r from-[var(--blue)] via-[var(--amber)] to-[var(--green)] bg-clip-text text-transparent"
+            />
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -44,13 +47,28 @@ export default function Home() {
           </motion.div>
         </div>
 
+        {/* Intro (Welcome) */}
+        <div className="card-surface p-6 md:p-8 mt-6">
+          <h2 className="text-2xl font-semibold">Welcome</h2>
+          <p className="text-[var(--muted)] mt-3">
+            I like building useful things with a clear purpose. Uru Intelligence is the best example of that — a tool that
+            helps people work smarter, communicate better, and get results faster. Along the way, I’m studying Mechanical
+            Engineering at Texas A&M and staying hands-on with design, systems, and communication.
+          </p>
+          <p className="text-[var(--muted)] mt-3">
+            My background includes Program Director at New England Sci‑Tech (STEM education center for kids), FIRST Robotics,
+            SOLIDWORKS design, BlueStamp Engineering, NASA Space Camp Advanced Training, and Aggies Invent — plus a lot of
+            writing that turns complex ideas into something people can actually use.
+          </p>
+        </div>
+
         {/* Featured: Uru Intelligence */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.35, delay: 0.1 }}
-          className="card-surface p-6 md:p-8 mt-6"
+          className="card-surface p-6 md:p-8 mt-8"
         >
           <h2 className="text-2xl md:text-3xl font-semibold">Uru Intelligence</h2>
           <p className="text-[var(--muted)] mt-3 max-w-3xl">
@@ -66,14 +84,16 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.35, delay: i * 0.05 }}
-                className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5"
               >
-                <img
-                  src={`${import.meta.env.BASE_URL}images/${img}`}
-                  alt={`Uru Intelligence screenshot ${i+1}`}
-                  className="w-full h-40 md:h-48 lg:h-56 object-cover transition-transform duration-500 hover:scale-105"
-                />
-                <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-transparent to-white/5" />
+                <TiltCard className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5">
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/${img}`}
+                    alt={`Uru Intelligence screenshot ${i+1}`}
+                    className="w-full h-40 md:h-48 lg:h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="blueprint-grid" />
+                  <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-transparent to-white/5" />
+                </TiltCard>
               </motion.div>
             ))}
           </div>
@@ -88,21 +108,6 @@ export default function Home() {
             </Link>
           </div>
         </motion.div>
-
-        {/* Intro */}
-        <div className="card-surface p-6 md:p-8 mt-8">
-          <h2 className="text-2xl font-semibold">Welcome</h2>
-          <p className="text-[var(--muted)] mt-3">
-            I like building useful things with a clear purpose. Uru Intelligence is the best example of that — a tool that
-            helps people work smarter, communicate better, and get results faster. Along the way, I’m studying Mechanical
-            Engineering at Texas A&M and staying hands-on with design, systems, and communication.
-          </p>
-          <p className="text-[var(--muted)] mt-3">
-            My background includes Program Director at New England Sci‑Tech (STEM education center for kids), FIRST Robotics,
-            SOLIDWORKS design, BlueStamp Engineering, NASA Space Camp Advanced Training, and Aggies Invent — plus a lot of
-            writing that turns complex ideas into something people can actually use.
-          </p>
-        </div>
       </div>
     </section>
   )

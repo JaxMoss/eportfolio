@@ -7,6 +7,8 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Projects from './pages/Projects'
 import PageBackground from './components/PageBackground'
+import SmoothScroll from './components/SmoothScroll'
+const ParticleField = React.lazy(() => import('./components/ParticleField'))
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -37,9 +39,15 @@ function App() {
       <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] relative">
         {/* Site-wide subtle grid background */}
         <div className="bg-grid fixed inset-0 z-0 pointer-events-none" />
+        {/* Technical particle network (below auroras) */}
+        <React.Suspense fallback={null}>
+          <ParticleField />
+        </React.Suspense>
         {/* Per-page background variants */}
         <PageBackground />
         <div className="bg-noise" />
+        {/* Smooth scrolling (Lenis) */}
+        <SmoothScroll />
         <Navbar />
         <main className="relative z-10 pt-20 pb-12">
           <AnimatedRoutes />

@@ -1,6 +1,8 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 
+const ThreeHero = React.lazy(() => import('./ThreeHero'))
+
 export default function PageBackground() {
   const { pathname } = useLocation()
 
@@ -11,12 +13,19 @@ export default function PageBackground() {
     pathname.startsWith('/projects') ? 'projects' :
     pathname.startsWith('/contact') ? 'contact' : 'home'
 
+  const isHome = variant === 'home'
+
   return (
-    <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-      {/* Subtle grid is placed globally via index.css (App contains the grid layer) */}
+    <div className="pointer-events-none fixed inset-0 z-0 overflow-visible">
+      {/* ThreeHero spans the full viewport and fades when not on Home */}
+      <div className={`pointer-events-none fixed inset-0 transition-opacity duration-500 ${isHome ? 'opacity-100' : 'opacity-0'}`}>
+        <React.Suspense fallback={null}>
+          <ThreeHero />
+        </React.Suspense>
+      </div>
 
       {/* Aurora layers vary by route */}
-      {variant === 'home' && (
+      {isHome && (
         <>
           <div className="aurora aurora-slow left-1/2 -translate-x-1/2 -top-1/3" />
           <div className="aurora aurora-blue right-[-10%] top-1/4" />

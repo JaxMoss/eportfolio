@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 function Navbar() {
   const location = useLocation()
@@ -33,7 +34,8 @@ function Navbar() {
         style={{ width: `${progress}%` }}
       />
       <nav className={`fixed top-0 inset-x-0 z-50 transition-transform duration-300 ${hidden ? '-translate-y-full' : 'translate-y-0'}`}>
-        <div className="glass">
+        <div className="glass relative">
+          <div className="nav-shimmer" aria-hidden />
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <Link to="/" className="font-semibold tracking-tight text-[var(--text)]">
               Jax Moss
@@ -42,11 +44,43 @@ function Navbar() {
               <Menu size={22} />
             </button>
             <ul className="hidden md:flex items-center gap-8">
-              <li><Link to="/" className={`${linkBase} ${location.pathname === '/' ? linkActive : ''}`}>Home</Link></li>
-              <li><Link to="/about" className={`${linkBase} ${location.pathname === '/about' ? linkActive : ''}`}>About</Link></li>
-              <li><Link to="/projects" className={`${linkBase} ${location.pathname === '/projects' ? linkActive : ''}`}>Projects</Link></li>
-              <li><Link to="/contact" className={`${linkBase} ${location.pathname === '/contact' ? linkActive : ''}`}>Contact</Link></li>
-              <li><a href="https://www.linkedin.com/in/jackson-moss-b76335265/" target="_blank" rel="noreferrer" className={linkBase}>LinkedIn</a></li>
+              <li className="relative">
+                <Link to="/" className={`${linkBase} ${location.pathname === '/' ? linkActive : ''}`}>
+                  <motion.span whileHover={{ y: -1, scale: 1.04 }} transition={{ type: 'spring', stiffness: 300, damping: 18 }}>Home</motion.span>
+                </Link>
+                {location.pathname === '/' && (
+                  <motion.span layoutId="nav-underline" className="absolute -bottom-2 left-0 h-[2px] w-full bg-[var(--blue)]" />
+                )}
+              </li>
+              <li className="relative">
+                <Link to="/about" className={`${linkBase} ${location.pathname === '/about' ? linkActive : ''}`}>
+                  <motion.span whileHover={{ y: -1, scale: 1.04 }} transition={{ type: 'spring', stiffness: 300, damping: 18 }}>About</motion.span>
+                </Link>
+                {location.pathname === '/about' && (
+                  <motion.span layoutId="nav-underline" className="absolute -bottom-2 left-0 h-[2px] w-full bg-[var(--blue)]" />
+                )}
+              </li>
+              <li className="relative">
+                <Link to="/projects" className={`${linkBase} ${location.pathname === '/projects' ? linkActive : ''}`}>
+                  <motion.span whileHover={{ y: -1, scale: 1.04 }} transition={{ type: 'spring', stiffness: 300, damping: 18 }}>Projects</motion.span>
+                </Link>
+                {location.pathname === '/projects' && (
+                  <motion.span layoutId="nav-underline" className="absolute -bottom-2 left-0 h-[2px] w-full bg-[var(--blue)]" />
+                )}
+              </li>
+              <li className="relative">
+                <Link to="/contact" className={`${linkBase} ${location.pathname === '/contact' ? linkActive : ''}`}>
+                  <motion.span whileHover={{ y: -1, scale: 1.04 }} transition={{ type: 'spring', stiffness: 300, damping: 18 }}>Contact</motion.span>
+                </Link>
+                {location.pathname === '/contact' && (
+                  <motion.span layoutId="nav-underline" className="absolute -bottom-2 left-0 h-[2px] w-full bg-[var(--blue)]" />
+                )}
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/jackson-moss-b76335265/" target="_blank" rel="noreferrer" className={linkBase}>
+                  <motion.span whileHover={{ y: -1, scale: 1.04 }} transition={{ type: 'spring', stiffness: 300, damping: 18 }}>LinkedIn</motion.span>
+                </a>
+              </li>
             </ul>
           </div>
           {/* Mobile Menu */}
