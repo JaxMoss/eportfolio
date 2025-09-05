@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import MagneticButton from '../components/MagneticButton'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -58,9 +59,9 @@ export default function Contact() {
             <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={6} placeholder="Share your message or how I can help..." className={input} />
           </div>
           <div className="text-center">
-            <button type="submit" className="inline-flex items-center gap-2 rounded-lg px-5 py-2.5 bg-[var(--blue)] text-white hover:shadow-lg hover:shadow-[rgba(59,130,246,0.35)] transition-transform hover:-translate-y-0.5">
+            <MagneticButton type="submit" className="inline-flex items-center gap-2 rounded-lg px-5 py-2.5 bg-[var(--blue)] text-white hover:shadow-lg hover:shadow-[rgba(59,130,246,0.35)]">
               Send Message
-            </button>
+            </MagneticButton>
           </div>
         </form>
 

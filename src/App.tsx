@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Projects from './pages/Projects'
+import PageBackground from './components/PageBackground'
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -36,10 +37,9 @@ function App() {
       <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] relative">
         {/* Site-wide subtle grid background */}
         <div className="bg-grid fixed inset-0 z-0 pointer-events-none" />
-        {/* Global color glows spanning the whole page */}
-        <div className="glow glow-blue fixed left-1/2 -translate-x-1/2 -top-40 z-0 pointer-events-none" />
-        <div className="glow glow-green fixed -left-40 top-40 z-0 pointer-events-none" />
-        <div className="glow glow-amber fixed -right-40 -bottom-40 z-0 pointer-events-none" />
+        {/* Per-page background variants */}
+        <PageBackground />
+        <div className="bg-noise" />
         <Navbar />
         <main className="relative z-10 pt-20 pb-12">
           <AnimatedRoutes />

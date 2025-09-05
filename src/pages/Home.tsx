@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import MagneticButton from '../components/MagneticButton'
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-[var(--muted)] text-lg max-w-2xl mx-auto"
           >
-            I’m Jackson — CEO & founder of Uru Intelligence. I’m launching an AI work productivity platform. I also study Mechanical Engineering at Texas A&M and I’m a National Merit Finalist.
+            I’m Jackson — CEO & founder of Uru Intelligence. I’m launching an AI work productivity platform. I also study Mechanical Engineering at Texas A&M.
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
@@ -33,11 +34,12 @@ export default function Home() {
             transition={{ delay: 0.35 }}
             className="mt-8"
           >
-            <Link
-              to="/projects"
-              className="inline-flex items-center gap-2 rounded-lg px-5 py-3 bg-[var(--blue)] text-white hover:shadow-lg hover:shadow-[rgba(59,130,246,0.35)] transition-transform hover:-translate-y-0.5"
-            >
-              Explore My Work
+            <Link to="/projects">
+              <MagneticButton
+                className="inline-flex items-center gap-2 rounded-lg px-5 py-3 bg-[var(--blue)] text-white hover:shadow-lg hover:shadow-[rgba(59,130,246,0.35)]"
+              >
+                Explore My Work
+              </MagneticButton>
             </Link>
           </motion.div>
         </div>
@@ -56,11 +58,12 @@ export default function Home() {
             and more effective. It blends smart automation with clean communication so your work moves forward without friction.
           </p>
           <div className="mt-4">
-            <Link
-              to="/projects"
-              className="inline-flex items-center gap-2 rounded-lg px-5 py-3 bg-[var(--blue)] text-white hover:shadow-lg hover:shadow-[rgba(59,130,246,0.35)] transition-transform hover:-translate-y-0.5"
-            >
-              Learn more
+            <Link to="/projects">
+              <MagneticButton
+                className="inline-flex items-center gap-2 rounded-lg px-5 py-3 bg-[var(--blue)] text-white hover:shadow-lg hover:shadow-[rgba(59,130,246,0.35)]"
+              >
+                Learn more
+              </MagneticButton>
             </Link>
           </div>
         </motion.div>
@@ -74,8 +77,9 @@ export default function Home() {
             Engineering at Texas A&M and staying hands-on with design, systems, and communication.
           </p>
           <p className="text-[var(--muted)] mt-3">
-            My background includes SOLIDWORKS design, BlueStamp Engineering, NASA Space Camp Advanced Training, Aggies Invent,
-            and a lot of writing that turns complex ideas into something people can actually use.
+            My background includes Program Director at New England Sci‑Tech (STEM education center for kids), FIRST Robotics,
+            SOLIDWORKS design, BlueStamp Engineering, NASA Space Camp Advanced Training, and Aggies Invent — plus a lot of
+            writing that turns complex ideas into something people can actually use.
           </p>
         </div>
       </div>

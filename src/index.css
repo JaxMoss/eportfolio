@@ -55,3 +55,23 @@ body {
 .glow-blue { background: radial-gradient(circle at center, rgba(59,130,246,.20), transparent 60%); }
 .glow-green { background: radial-gradient(circle at center, rgba(16,185,129,.12), transparent 60%); }
 .glow-amber { background: radial-gradient(circle at center, rgba(245,158,11,.10), transparent 60%); }
+
+/* Aurora gradient blobs */
+.aurora { position: absolute; width: 60vmax; height: 60vmax; filter: blur(80px); opacity: .18; border-radius: 50%; transform: translateZ(0); }
+.aurora-slow { background: conic-gradient(from 0deg, rgba(59,130,246,.35), rgba(245,158,11,.25), rgba(16,185,129,.25), rgba(59,130,246,.35)); animation: spin 30s linear infinite; }
+.aurora-blue { background: radial-gradient(circle at 30% 30%, rgba(59,130,246,.32), transparent 60%); }
+.aurora-amber { background: radial-gradient(circle at 50% 50%, rgba(245,158,11,.28), transparent 60%); }
+.aurora-maroon { background: radial-gradient(circle at 50% 50%, rgba(80,0,0,.35), transparent 60%); }
+.aurora-steel { background: radial-gradient(circle at 50% 50%, rgba(113,113,122,.30), transparent 60%); }
+.aurora-violet { background: radial-gradient(circle at 50% 50%, rgba(139,92,246,.30), transparent 60%); }
+.aurora-teal { background: radial-gradient(circle at 50% 50%, rgba(20,184,166,.28), transparent 60%); }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Light beams */
+.beam { position: absolute; inset: 0; mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%); opacity: .25; }
+.beam-center { background: radial-gradient(80% 60% at 50% 30%, rgba(255,255,255,.12), transparent 60%); }
+.beam-diagonal { background: linear-gradient(115deg, transparent 40%, rgba(255,255,255,.10) 50%, transparent 60%); }
+.beam-wide { background: radial-gradient(100% 70% at 50% 20%, rgba(255,255,255,.10), transparent 60%); }
+
+/* Optional noise texture for extra depth */
+.bg-noise { position: absolute; inset: 0; opacity: .06; background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%222%22 stitchTiles=%22stitch%22/></filter><rect width=%22200%22 height=%22200%22 filter=%22url(%23n)%22 opacity=%220.4%22/></svg>'); mix-blend-mode: overlay; pointer-events:none; }

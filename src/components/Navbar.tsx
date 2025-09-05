@@ -46,6 +46,7 @@ function Navbar() {
               <li><Link to="/about" className={`${linkBase} ${location.pathname === '/about' ? linkActive : ''}`}>About</Link></li>
               <li><Link to="/projects" className={`${linkBase} ${location.pathname === '/projects' ? linkActive : ''}`}>Projects</Link></li>
               <li><Link to="/contact" className={`${linkBase} ${location.pathname === '/contact' ? linkActive : ''}`}>Contact</Link></li>
+              <li><a href="https://www.linkedin.com/in/jackson-moss-b76335265/" target="_blank" rel="noreferrer" className={linkBase}>LinkedIn</a></li>
             </ul>
           </div>
           {/* Mobile Menu */}
@@ -56,6 +57,7 @@ function Navbar() {
                 <li><Link onClick={() => setOpen(false)} to="/about" className={`${linkBase} block py-1 ${location.pathname === '/about' ? linkActive : ''}`}>About</Link></li>
                 <li><Link onClick={() => setOpen(false)} to="/projects" className={`${linkBase} block py-1 ${location.pathname === '/projects' ? linkActive : ''}`}>Projects</Link></li>
                 <li><Link onClick={() => setOpen(false)} to="/contact" className={`${linkBase} block py-1 ${location.pathname === '/contact' ? linkActive : ''}`}>Contact</Link></li>
+                <li><a onClick={() => setOpen(false)} href="https://www.linkedin.com/in/jackson-moss-b76335265/" target="_blank" rel="noreferrer" className={`${linkBase} block py-1`}>LinkedIn</a></li>
               </ul>
             </div>
           )}
