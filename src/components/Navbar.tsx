@@ -36,7 +36,7 @@ function Navbar() {
         <div className="glass">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <Link to="/" className="font-semibold tracking-tight text-[var(--text)]">
-              Jackson Moss
+              Jax Moss
             </Link>
             <button className="md:hidden p-2 rounded-lg hover:bg-white/5" onClick={() => setOpen(v => !v)} aria-label="Toggle menu">
               <Menu size={22} />

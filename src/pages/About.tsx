@@ -7,9 +7,11 @@ export default function About() {
       <div className="card-surface p-6 md:p-8">
         <h1 className="text-3xl md:text-4xl font-bold text-center">About Me</h1>
         <div className="mt-6 flex items-center justify-center">
-          <div className="size-28 md:size-36 rounded-full border-2 border-[var(--maroon)] bg-gradient-to-br from-[var(--maroon)] to-[#800000] flex items-center justify-center text-3xl font-bold">
-            JM
-          </div>
+          <img
+            src={`${import.meta.env.BASE_URL}images/headshot.jpg`}
+            alt="Jax Moss headshot"
+            className="size-28 md:size-36 rounded-full object-cover border-2 border-[var(--maroon)] shadow-lg"
+          />
         </div>
         <div className="max-w-3xl mx-auto text-left">
           <h2 className="text-2xl font-semibold mt-8">Personal Portfolio</h2>

@@ -17,7 +17,7 @@ export default function Home() {
             className="text-4xl md:text-6xl font-bold tracking-tight"
           >
             <span className="bg-gradient-to-r from-[var(--blue)] via-[var(--amber)] to-[var(--green)] bg-clip-text text-transparent">
-              Jackson Moss
+              Jax Moss
             </span>
           </motion.h1>
           <motion.p
@@ -57,6 +57,27 @@ export default function Home() {
             I’m building Uru Intelligence — an AI work productivity platform designed to make teams faster, clearer,
             and more effective. It blends smart automation with clean communication so your work moves forward without friction.
           </p>
+          {/* Uru screenshots */}
+          <div className="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {['uru-1.png','uru-2.png','uru-3.png'].map((img, i) => (
+              <motion.div
+                key={img}
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.35, delay: i * 0.05 }}
+                className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5"
+              >
+                <img
+                  src={`${import.meta.env.BASE_URL}images/${img}`}
+                  alt={`Uru Intelligence screenshot ${i+1}`}
+                  className="w-full h-40 md:h-48 lg:h-56 object-cover transition-transform duration-500 hover:scale-105"
+                />
+                <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-transparent to-white/5" />
+              </motion.div>
+            ))}
+          </div>
+
           <div className="mt-4">
             <Link to="/projects">
               <MagneticButton
