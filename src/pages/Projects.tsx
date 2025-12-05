@@ -1,141 +1,294 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FolderKanban } from 'lucide-react'
-import FlipCard from '../components/FlipCard'
+import { FileText, Presentation, Mic, HelpCircle } from 'lucide-react'
 import TiltCard from '../components/TiltCard'
 
 export default function Projects() {
   return (
     <section className="relative py-10">
-      {/* Subtle background handled globally */}
-      {/* color glows handled globally in App */}
-
-      {/* Header area: Coming Soon + Upcoming side by side */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-6 items-start">
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="relative card-surface px-8 py-12 text-center"
-        >
-          <div className="mx-auto w-20 h-20 rounded-2xl flex items-center justify-center bg-white/5 border border-white/10 mb-6">
-            <FolderKanban className="text-[var(--blue)]" size={40} />
-          </div>
+      {/* Header */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">
             <span className="bg-gradient-to-r from-[var(--blue)] via-[var(--amber)] to-[var(--green)] bg-clip-text text-transparent">
-              Projects Coming Soon
+              My Projects
             </span>
           </h1>
           <p className="text-[var(--muted)] mt-4 max-w-2xl mx-auto">
-            My flagship project is <strong>Uru Intelligence</strong> — an AI work productivity platform I’m launching as
-            CEO & founder. I’ll be sharing product details, demos, and the story behind the build here soon.
+            Welcome to my portfolio of technical communication work from COMM 205. 
+            Below you'll find my written documents, speech presentations, and multimedia projects.
           </p>
-          <div className="mt-6 inline-flex items-center gap-2 text-sm text-[var(--muted)]">
-            <span>ETA:</span>
-            <span className="px-2 py-1 rounded bg-white/5 border border-white/10">End of Semester</span>
+        </div>
+
+        {/* Analogy Paper Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="card-surface p-6 md:p-8 mb-8"
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-[var(--blue)]/20 border border-[var(--blue)]/30">
+              <FileText className="text-[var(--blue)]" size={24} />
+            </div>
+            <h2 className="text-2xl font-semibold">Analogy Paper</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6 items-center">
+            <div>
+              <p className="text-[var(--muted)] mb-4">
+                Analogies are powerful tools that help audiences understand complex concepts by connecting unfamiliar ideas to everyday experiences.
+                In my paper <strong>"Reshaping Robots, Reshaping the World"</strong>, I compare modular robots to water drops merging and splitting, and their coordination to a college group project, making cutting-edge robotics accessible to any reader.
+              </p>
+              <a 
+                href="https://docs.google.com/document/d/1yRGeGwLBunIUJP95s5Kvg8ss7FPNci08-1OlLSq0eO8/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[var(--blue)] text-white hover:shadow-lg hover:shadow-[rgba(59,130,246,0.35)] transition-all"
+              >
+                <FileText size={18} />
+                View Analogy Paper
+              </a>
+            </div>
+            <TiltCard className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5">
+              <img
+                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop"
+                alt="Robot technology representing modular robotics"
+                className="w-full h-48 md:h-56 object-cover"
+              />
+              <div className="blueprint-grid" />
+            </TiltCard>
           </div>
         </motion.div>
 
+        {/* FAQ Paper Section */}
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.05 }}
-          className="relative card-surface p-6 text-left"
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="card-surface p-6 md:p-8 mb-8"
         >
-          <h3 className="text-xl font-semibold">Upcoming showcases</h3>
-          <p className="text-[var(--muted)] mt-3 text-sm">More projects will appear here with animated blueprints, interactive specs, and development timelines.</p>
-          <p className="text-[var(--muted)] mt-2 text-sm">Filters, 3D previews, and progress indicators are planned.</p>
-        </motion.div>
-      </div>
-
-      {/* Interactive sample card */}
-      <div className="mt-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <FlipCard
-          className="h-64"
-          front={
-            <div className="card-surface h-full w-full rounded-xl overflow-hidden border border-white/10 relative">
-              <img src={`${import.meta.env.BASE_URL}images/uru-1.png`} alt="Uru Intelligence" className="absolute inset-0 size-full object-cover" />
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-[var(--amber)]/20 border border-[var(--amber)]/30">
+              <HelpCircle className="text-[var(--amber)]" size={24} />
+            </div>
+            <h2 className="text-2xl font-semibold">FAQ Paper</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6 items-center">
+            <div>
+              <p className="text-[var(--muted)] mb-4">
+                FAQs anticipate reader questions and provide clear, organized answers that address common concerns and misconceptions.
+                My FAQ document on <strong>"Nuclear Thermal Propulsion for Mars Missions"</strong> tackles key questions like safety, speed, and feasibility, explaining how nuclear rockets could cut travel time in half and reduce radiation exposure for astronauts.
+              </p>
+              <a 
+                href="https://docs.google.com/document/d/1jwwaCrqS-YeZmnGR413Op3vYKPGkJ2IpcHvIir2udJY/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[var(--amber)] text-white hover:shadow-lg hover:shadow-[rgba(245,158,11,0.35)] transition-all"
+              >
+                <FileText size={18} />
+                View FAQ Paper
+              </a>
+            </div>
+            <TiltCard className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5">
+              <img
+                src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=600&h=400&fit=crop"
+                alt="Mars and space exploration"
+                className="w-full h-48 md:h-56 object-cover"
+              />
               <div className="blueprint-grid" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-white/5" />
-              <div className="absolute bottom-3 left-3 text-sm px-2 py-1 rounded bg-black/40 border border-white/10">Uru Intelligence</div>
-            </div>
-          }
-          back={
-            <div className="card-surface h-full w-full rounded-xl overflow-hidden border border-white/10 p-4 text-left">
-              <h3 className="text-xl font-semibold">Uru Intelligence — Specs</h3>
-              <ul className="mt-3 space-y-1 text-[var(--muted)] text-sm">
-                <li>• Platform: Web, multi-tenant</li>
-                <li>• Focus: Workflows, collaboration, clarity</li>
-                <li>• Tech: React + Vite; AI pipeline</li>
-                <li>• Status: Launch in progress</li>
-              </ul>
-              <div className="mt-4 text-xs text-[var(--muted)]">Hover to flip • Engineering blueprint style</div>
-            </div>
-          }
-        />
-      </div>
+            </TiltCard>
+          </div>
+        </motion.div>
 
-      {/* Project Gallery with Filters */}
-      <Gallery />
+        {/* Speech Presentations Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mb-8"
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-[var(--green)]/20 border border-[var(--green)]/30">
+              <Presentation className="text-[var(--green)]" size={24} />
+            </div>
+            <h2 className="text-2xl font-semibold">Speech Presentations</h2>
+          </div>
+          
+          <p className="text-[var(--muted)] mb-6">
+            Below are the slides that accompanied my speeches for COMM 205.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Speech 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.35 }}
+              className="card-surface p-6"
+            >
+              <h3 className="text-xl font-semibold mb-2">Swimming Cyborgs</h3>
+              <p className="text-[var(--muted)] mb-4 text-sm">
+                Scientists are turning jellyfish into ocean-exploring robots. Yes, really. This was my intro speech 
+                about how we're hacking biology to explore the deep sea in ways traditional robots can't.
+              </p>
+              <TiltCard className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1551244072-5d12893278ab?w=600&h=300&fit=crop"
+                  alt="Jellyfish representing biohybrid robotics"
+                  className="w-full h-36 object-cover"
+                />
+                <div className="blueprint-grid" />
+              </TiltCard>
+              <a 
+                href="https://docs.google.com/presentation/d/1k0cL5MUQD0QBos6KfyDWfGAZmC_1qjgXa0Kdgza_5Pk/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--green)] text-white hover:shadow-lg transition-all text-sm"
+              >
+                <Presentation size={16} />
+                View Slides
+              </a>
+            </motion.div>
+
+            {/* Speech 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="card-surface p-6"
+            >
+              <h3 className="text-xl font-semibold mb-2">Reshaping Robots</h3>
+              <p className="text-[var(--muted)] mb-4 text-sm">
+                What if robots could rearrange themselves like Transformers? My informative speech dives into 
+                modular robots that can literally rebuild their own bodies to tackle different jobs.
+              </p>
+              <TiltCard className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1518314916381-77a37c2a49ae?w=600&h=300&fit=crop"
+                  alt="Robotic arm representing modular robotics"
+                  className="w-full h-36 object-cover"
+                />
+                <div className="blueprint-grid" />
+              </TiltCard>
+              <a 
+                href="https://docs.google.com/presentation/d/1qRnLiQB2fWwGHK2-v3ZuHgF6eJwIoIEtTNGG6aWEISE/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--green)] text-white hover:shadow-lg transition-all text-sm"
+              >
+                <Presentation size={16} />
+                View Slides
+              </a>
+            </motion.div>
+
+            {/* Speech 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.45 }}
+              className="card-surface p-6"
+            >
+              <h3 className="text-xl font-semibold mb-2">Which Way to Mars?</h3>
+              <p className="text-[var(--muted)] mb-4 text-sm">
+                For my persuasive speech, I made the case for nuclear rockets over traditional ones. Faster trips, 
+                less radiation for astronauts, and NASA's already working on it. Pretty convincing stuff.
+              </p>
+              <TiltCard className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?w=600&h=300&fit=crop"
+                  alt="Rocket launch representing Mars missions"
+                  className="w-full h-36 object-cover"
+                />
+                <div className="blueprint-grid" />
+              </TiltCard>
+              <a 
+                href="https://docs.google.com/presentation/d/1BMoAEMxvwJ3xjhzOXBrWIf13-pvxLBau/edit?usp=sharing&ouid=104618900628430264429&rtpof=true&sd=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--green)] text-white hover:shadow-lg transition-all text-sm"
+              >
+                <Presentation size={16} />
+                View Slides
+              </a>
+            </motion.div>
+
+            {/* Speech 4 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="card-surface p-6"
+            >
+              <h3 className="text-xl font-semibold mb-2">WATE: Teleportation Pitch</h3>
+              <p className="text-[var(--muted)] mb-4 text-sm">
+                Our group did a Shark Tank-style pitch for WATE, a fictional teleportation company. We had to sell 
+                investors on technology that doesn't exist yet.
+              </p>
+              <TiltCard className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=300&fit=crop"
+                  alt="Futuristic technology representing teleportation"
+                  className="w-full h-36 object-cover"
+                />
+                <div className="blueprint-grid" />
+              </TiltCard>
+              <a 
+                href="https://docs.google.com/presentation/d/1j1mLlAEyXP4QlvWG6ECQo97ScZC7dpCL/edit?usp=sharing&ouid=104618900628430264429&rtpof=true&sd=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--green)] text-white hover:shadow-lg transition-all text-sm"
+              >
+                <Presentation size={16} />
+                View Slides
+              </a>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Podcast Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.55 }}
+          className="card-surface p-6 md:p-8 mb-8"
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-[var(--maroon)]/20 border border-[var(--maroon)]/30">
+              <Mic className="text-[var(--maroon)]" size={24} />
+            </div>
+            <h2 className="text-2xl font-semibold">Podcast</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6 items-center">
+            <div>
+              <p className="text-[var(--muted)] mb-4">
+                Podcasts are a great way to share ideas through conversation and make complex topics easier to understand.
+                In my podcast <strong>"The Future of Work"</strong>, I discuss Uru Intelligence, the AI workspace platform I'm building, and explore why we spend too much time moving information between apps instead of doing meaningful work.
+              </p>
+              <a 
+                href="https://drive.google.com/file/d/1wdR8Xp09F_Ye_PunvsvzPBc6k1ILYy66/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[var(--maroon)] text-white hover:shadow-lg hover:shadow-[rgba(80,0,0,0.35)] transition-all"
+              >
+                <Mic size={18} />
+                Listen to Podcast
+              </a>
+            </div>
+            <TiltCard className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5">
+              <img
+                src={`${import.meta.env.BASE_URL}images/uru-1.png`}
+                alt="Uru Intelligence platform"
+                className="w-full h-48 md:h-56 object-cover"
+              />
+              <div className="blueprint-grid" />
+            </TiltCard>
+          </div>
+        </motion.div>
+
+      </div>
     </section>
   )
 }
-
-
-function Gallery() {
-  const CATEGORIES = ['All', 'AI', 'Mechanical', 'Academic'] as const
-  type Cat = typeof CATEGORIES[number]
-  const ITEMS: { id: string; title: string; img: string; categories: Cat[] }[] = [
-    { id: 'uru-1', title: 'Uru Intelligence · AI Platform', img: 'uru-1.png', categories: ['AI'] },
-    { id: 'uru-2', title: 'Uru · Workflows', img: 'uru-2.png', categories: ['AI'] },
-    { id: 'uru-3', title: 'Uru · Interfaces', img: 'uru-3.png', categories: ['AI'] },
-    { id: 'mech-1', title: 'Mechanical Design Study', img: 'about-4.png', categories: ['Mechanical'] },
-    { id: 'acad-1', title: 'Academic Project Brief', img: 'about-1.jpg', categories: ['Academic'] },
-  ]
-  const [filter, setFilter] = React.useState<Cat>('All')
-  const shown = ITEMS.filter(i => filter === 'All' || i.categories.includes(filter))
-
-  return (
-    <div className="mt-10 max-w-6xl mx-auto">
-      <div className="flex flex-wrap gap-2 justify-center">
-        {CATEGORIES.map(cat => (
-          <button
-            key={cat}
-            onClick={() => setFilter(cat)}
-            className={`chip ${filter===cat ? 'active' : ''}`}
-            aria-pressed={filter===cat}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
-
-      <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {shown.map((p, i) => (
-          <motion.div
-            key={p.id}
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.35, delay: i * 0.05 }}
-          >
-            <TiltCard className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5">
-              <img
-                src={`${import.meta.env.BASE_URL}images/${p.img}`}
-                alt={p.title}
-                className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="blueprint-grid" />
-              <div className="absolute inset-x-0 bottom-0 p-3 text-sm bg-gradient-to-t from-black/40 to-transparent">
-                <div className="font-medium">{p.title}</div>
-                <div className="text-[var(--muted)]">{p.categories.join(' · ')} </div>
-              </div>
-            </TiltCard>
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  )
-}
-

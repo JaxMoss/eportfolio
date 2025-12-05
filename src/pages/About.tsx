@@ -103,80 +103,85 @@ export default function About() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.4 }}
           className="max-w-3xl mx-auto text-left">
-          <h2 className="text-2xl font-semibold mt-8">Personal Portfolio</h2>
+          <h2 className="text-2xl font-semibold mt-8">Who I Am</h2>
           <p className="text-[var(--muted)] mt-3">
-            Hi, I’m Jax. I’m the CEO & founder of <strong>Uru Intelligence</strong>, an AI work productivity platform I’m
-            launching. I also study Mechanical Engineering at Texas A&M. This site shares what I’m building and how I think
-            about engineering, product, and clear communication.
+            Hi, I'm Jax Moss — a Mechanical Engineering student at Texas A&M University with a passion for building things 
+            that matter. I believe the best engineers are also great communicators, which is why I'm committed to developing 
+            both my technical and communication skills throughout my academic journey.
           </p>
 
-          <h2 className="text-2xl font-semibold mt-8">About Me</h2>
+          <h2 className="text-2xl font-semibold mt-8">What Makes Me Unique</h2>
           <p className="text-[var(--muted)] mt-3">
-            I like building useful, well-explained products. My focus is pairing solid engineering with writing and
-            design so ideas make sense to the people who need them.
+            I'm not your typical engineering student. I bring a unique blend of technical expertise and entrepreneurial drive. 
+            As the CEO & founder of <strong>Uru Intelligence</strong>, I'm building an AI work productivity platform while 
+            balancing my engineering studies. This dual focus has taught me how to manage complex projects, communicate 
+            across different audiences, and turn ideas into reality.
           </p>
 
-          <h2 className="text-2xl font-semibold mt-8">My Diverse Interests and Experiences</h2>
-
+          <h2 className="text-2xl font-semibold mt-8">My Personal Interests</h2>
           <div className="grid md:grid-cols-2 gap-6 mt-4">
             <div className="card-surface p-5">
-              <h3 className="text-xl font-semibold">Engineering & Technical Innovation</h3>
+              <h3 className="text-xl font-semibold">Technology & Innovation</h3>
               <ul className="list-disc pl-5 mt-3 space-y-2 text-[var(--muted)]">
-                <li>SOLIDWORKS advanced design</li>
-                <li>FIRST Robotics</li>
-                <li>BlueStamp Engineering and NASA Space Camp Advanced Training</li>
-                <li>Aggies Invent participation</li>
-                <li>Robotics, manufacturing, and technical problem-solving</li>
+                <li>Building AI-powered tools and platforms</li>
+                <li>Exploring new technologies and their applications</li>
+                <li>3D design and CAD modeling with SOLIDWORKS</li>
+                <li>Robotics and automation systems</li>
               </ul>
             </div>
             <div className="card-surface p-5">
-              <h3 className="text-xl font-semibold">Technical Communication Excellence</h3>
+              <h3 className="text-xl font-semibold">Learning & Growth</h3>
               <ul className="list-disc pl-5 mt-3 space-y-2 text-[var(--muted)]">
-                <li>Translating complex engineering concepts</li>
-                <li>Bridging technical and non-technical audiences</li>
+                <li>Continuous learning through hands-on projects</li>
+                <li>Attending engineering competitions like Aggies Invent</li>
+                <li>Exploring aerospace through NASA Space Camp</li>
+                <li>Teaching STEM concepts to younger students</li>
               </ul>
             </div>
             <div className="card-surface p-5">
-              <h3 className="text-xl font-semibold">Academic Focus</h3>
+              <h3 className="text-xl font-semibold">Communication & Leadership</h3>
               <ul className="list-disc pl-5 mt-3 space-y-2 text-[var(--muted)]">
-                <li>Mechanical Engineering coursework: design, systems, technical writing</li>
+                <li>Translating complex ideas into clear explanations</li>
+                <li>Leading teams and mentoring others</li>
+                <li>Public speaking and presentation skills</li>
+                <li>Writing that connects with diverse audiences</li>
               </ul>
             </div>
             <div className="card-surface p-5">
-              <h3 className="text-xl font-semibold">Leadership & Innovation</h3>
+              <h3 className="text-xl font-semibold">Problem Solving</h3>
               <ul className="list-disc pl-5 mt-3 space-y-2 text-[var(--muted)]">
-                <li>Uru Intelligence (CEO & Founder)</li>
-                <li>Program Director, New England Sci-Tech (STEM education for kids)</li>
-                <li>Financial dashboards and documentation</li>
-                <li>Collaborative university projects and competitions</li>
+                <li>Finding creative solutions to engineering challenges</li>
+                <li>Building products that solve real problems</li>
+                <li>Iterating and improving based on feedback</li>
+                <li>Collaborating across disciplines</li>
               </ul>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mt-6">
+          <h2 className="text-2xl font-semibold mt-8">Background & Experience</h2>
+          <div className="grid md:grid-cols-2 gap-6 mt-4">
             <div className="card-surface p-5">
-              <h3 className="text-xl font-semibold">Current Technical Competencies</h3>
+              <h3 className="text-xl font-semibold">Technical Training</h3>
               <p className="text-[var(--muted)] mt-2">
-                <strong>CAD/Design:</strong> SOLIDWORKS<br/>
-                <strong>Programming:</strong> AI platform development, financial modeling<br/>
-                <strong>Coursework:</strong> Mechanical Engineering fundamentals, technical writing
+                <strong>BlueStamp Engineering</strong> — Intensive hands-on program<br/>
+                <strong>NASA Space Camp</strong> — Advanced aerospace training<br/>
+                <strong>FIRST Robotics</strong> — Competition robotics experience
               </p>
             </div>
             <div className="card-surface p-5">
-              <h3 className="text-xl font-semibold">Key Experiences</h3>
+              <h3 className="text-xl font-semibold">Leadership Roles</h3>
               <p className="text-[var(--muted)] mt-2">
-                <strong>BlueStamp Engineering</strong> — Multi-week intensive program<br/>
-                <strong>NASA Space Camp</strong> — Advanced aerospace training<br/>
-                <strong>Aggies Invent</strong> — Innovation competition
+                <strong>Uru Intelligence</strong> — CEO & Founder<br/>
+                <strong>New England Sci-Tech</strong> — Former Program Director<br/>
+                <strong>Aggies Invent</strong> — Competition participant
               </p>
             </div>
           </div>
 
           <p className="text-[var(--muted)] mt-6">
-            I value both technical precision and clear communication. The most impactful engineers not only solve
-            complex problems but also communicate their solutions effectively.
+            What drives me is the intersection of engineering and communication. I believe the most impactful work 
+            happens when great ideas are communicated clearly — and that's what I strive to achieve in everything I do.
           </p>
-
 
         </motion.div>
       </div>

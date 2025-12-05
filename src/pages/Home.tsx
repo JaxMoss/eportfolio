@@ -29,7 +29,7 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-[var(--muted)] text-lg max-w-2xl mx-auto"
           >
-            I’m Jax — CEO & founder of Uru Intelligence. I’m launching an AI work productivity platform. I also study Mechanical Engineering at Texas A&M.
+            Mechanical Engineering Student at Texas A&M University
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
@@ -41,28 +41,25 @@ export default function Home() {
               <MagneticButton
                 className="inline-flex items-center gap-2 rounded-lg px-5 py-3 bg-[var(--blue)] text-white hover:shadow-lg hover:shadow-[rgba(59,130,246,0.35)]"
               >
-                Explore My Work
+                View My Work
               </MagneticButton>
             </Link>
           </motion.div>
         </div>
 
-        {/* Intro (Welcome) */}
+        {/* Portfolio Introduction */}
         <div className="card-surface p-6 md:p-8 mt-6">
-          <h2 className="text-2xl font-semibold">Welcome</h2>
+          <h2 className="text-2xl font-semibold">Welcome to My Portfolio</h2>
           <p className="text-[var(--muted)] mt-3">
-            I like building useful things with a clear purpose. Uru Intelligence is the best example of that — a tool that
-            helps people work smarter, communicate better, and get results faster. Along the way, I’m studying Mechanical
-            Engineering at Texas A&M and staying hands-on with design, systems, and communication.
-          </p>
-          <p className="text-[var(--muted)] mt-3">
-            My background includes Program Director at New England Sci‑Tech (STEM education center for kids), FIRST Robotics,
-            SOLIDWORKS design, BlueStamp Engineering, NASA Space Camp Advanced Training, and Aggies Invent — plus a lot of
-            writing that turns complex ideas into something people can actually use.
+            Welcome to my personal portfolio website! I'm Jax Moss, a Mechanical Engineering student at Texas A&M University. 
+            This site showcases my work as a Technical Communicator, featuring projects I've completed throughout my 
+            COMM 205 course. Here you'll find examples of my writing, presentations, and multimedia work that demonstrate 
+            my ability to communicate complex ideas clearly and effectively. From analogy papers to FAQ documents, 
+            speech presentations to podcasts, each project represents my growth in professional communication skills.
           </p>
         </div>
 
-        {/* Featured: Uru Intelligence */}
+        {/* Quick Links to Projects */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -70,40 +67,41 @@ export default function Home() {
           transition={{ duration: 0.35, delay: 0.1 }}
           className="card-surface p-6 md:p-8 mt-8"
         >
-          <h2 className="text-2xl md:text-3xl font-semibold">Uru Intelligence</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold">Featured Work</h2>
           <p className="text-[var(--muted)] mt-3 max-w-3xl">
-            I’m building Uru Intelligence — an AI work productivity platform designed to make teams faster, clearer,
-            and more effective. It blends smart automation with clean communication so your work moves forward without friction.
+            Explore my technical communication projects including written documents, speech presentations, and audio content. 
+            Each piece demonstrates different aspects of effective professional communication.
           </p>
-          {/* Uru screenshots */}
-          <div className="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {['uru-1.png','uru-2.png','uru-3.png'].map((img, i) => (
+          
+          <div className="mt-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { title: 'Analogy Paper', desc: 'Written Communication' },
+              { title: 'FAQ Document', desc: 'User-Focused Writing' },
+              { title: 'Speech Presentations', desc: 'Visual & Oral Communication' },
+              { title: 'Podcast', desc: 'Audio Communication' },
+            ].map((item, i) => (
               <motion.div
-                key={img}
+                key={item.title}
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.35, delay: i * 0.05 }}
               >
-                <TiltCard className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5">
-                  <img
-                    src={`${import.meta.env.BASE_URL}images/${img}`}
-                    alt={`Uru Intelligence screenshot ${i+1}`}
-                    className="w-full h-40 md:h-48 lg:h-56 object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                <TiltCard className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-4 h-32 flex flex-col justify-center text-center">
+                  <h3 className="font-semibold text-lg">{item.title}</h3>
+                  <p className="text-[var(--muted)] text-sm mt-1">{item.desc}</p>
                   <div className="blueprint-grid" />
-                  <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-transparent to-white/5" />
                 </TiltCard>
               </motion.div>
             ))}
           </div>
 
-          <div className="mt-4">
+          <div className="mt-6">
             <Link to="/projects">
               <MagneticButton
                 className="inline-flex items-center gap-2 rounded-lg px-5 py-3 bg-[var(--blue)] text-white hover:shadow-lg hover:shadow-[rgba(59,130,246,0.35)]"
               >
-                Learn more
+                View All Projects
               </MagneticButton>
             </Link>
           </div>
